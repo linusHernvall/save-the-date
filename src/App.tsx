@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Envelope } from './components/Envelope'
 import { Letter } from './components/Letter'
@@ -14,6 +14,21 @@ export default function App() {
     audio.volume = 0.4
     audio.play().catch(e => console.log('Audio playback refused:', e))
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      const audio = new Audio('/audio/seagulls_waves.mp3')
+      audio.loop = true
+      audio.volume = 0.2
+      // Fade in effect
+      audio.play().catch(e => console.log('Audio playback refused:', e))
+
+      return () => {
+        audio.pause()
+        audio.currentTime = 0
+      }
+    }
+  }, [isOpen])
 
   return (
     <main className="relative w-full h-screen bg-[#FDFCF5] overflow-hidden flex items-center justify-center perspective-1000">
