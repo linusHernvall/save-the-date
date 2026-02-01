@@ -24,7 +24,7 @@ export default function App() {
     if (!bgAudioRef.current) {
       bgAudioRef.current = new Audio('/audio/seagulls_waves.mp3')
       bgAudioRef.current.loop = true
-      bgAudioRef.current.volume = 0.2
+      bgAudioRef.current.volume = 0.4
     }
 
     const audio = bgAudioRef.current

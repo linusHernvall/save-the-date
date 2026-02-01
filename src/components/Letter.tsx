@@ -79,12 +79,12 @@ export const Letter = () => {
         </div>
 
         <motion.p 
-            className="relative z-10 font-sans italic text-center text-stone-600 text-sm tracking-wide"
+            className="relative z-10 max-w-md font-sans italic text-center text-stone-600 text-sm tracking-wide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3 }}
         >
-            Inbjudan och ytterligare information kommer senare.
+            Vi längtar efter att få fira vår dag med er! En formell inbjudan med alla detaljer skickas längre fram.
         </motion.p>
     </motion.article>
   )
