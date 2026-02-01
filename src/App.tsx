@@ -37,7 +37,7 @@ export default function App() {
   }, [isOpen, isAudioEnabled])
 
   return (
-    <main className="relative w-full h-screen bg-[#FDFCF5] overflow-hidden flex items-center justify-center perspective-1000">
+    <main className="relative w-full min-h-[100dvh] bg-[#FDFCF5] flex items-center justify-center perspective-1000 py-8 overflow-x-hidden">
       {/* Audio Toggle */}
       <button 
         onClick={() => setIsAudioEnabled(!isAudioEnabled)}
@@ -49,13 +49,13 @@ export default function App() {
 
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-30 pointer-events-none"
+        className="fixed inset-0 z-0 bg-cover bg-center opacity-30 pointer-events-none"
         style={{ backgroundImage: `url(${westCoastBg})` }} 
       />
       
       {/* Global Grain/Texture Overlay */}
       <div 
-        className="absolute inset-0 opacity-40 pointer-events-none z-0 mix-blend-multiply"
+        className="fixed inset-0 opacity-40 pointer-events-none z-0 mix-blend-multiply"
         style={{ backgroundImage: `url(${paperBg})`, backgroundSize: '200px' }} 
       />
 
