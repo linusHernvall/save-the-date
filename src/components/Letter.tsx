@@ -70,7 +70,7 @@ export const Letter = () => {
                 className="text-center"
              >
                 <p className="font-serif text-3xl md:text-4xl text-navy font-semibold tracking-wide mb-2">
-                    29 Augusti 2026
+                    29 augusti 2026
                 </p>
                 <p className="font-sans text-stone-600 tracking-[0.2em] uppercase text-sm">
                     Klädesholmen, Tjörn
